@@ -64,7 +64,7 @@ function gl_load() {
     gl.enableVertexAttribArray(gl.getAttribLocation(shader_program, "aVertexPosition"));
 
     // Set viewport coordinates to be the width of the canvas tag.
-    gl.viewport(0, 0, glcanvas.width, glcanvas.height);
+    gl.viewport(0, 0, gl_canvas.width, gl_canvas.height);
     // Turn on depth testing.
     gl.enable(gl.DEPTH_TEST);
     // Set the background color for gl.clear.
