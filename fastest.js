@@ -3,7 +3,6 @@ function gl_load() {
     var gl_canvas = document.getElementById("glcanvas");
     // Make a new WebGLRenderingContext.
     var gl = gl_canvas.getContext("experimental-webgl");
-
     // Define the coordinates of the triangle.
     var vertices = [
          0.0,  1.0,  0.0,  1.0,
@@ -18,10 +17,9 @@ function gl_load() {
     // Load coordinate data to the bound buffer.
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
-    // Write vertex shader source code. Note: "aVertexPosition" is not a
-    // built-in variable, it is a custom attribute.
+    // Write vertex shader source code.
     var vertex_shader_src = "" +
-    // Declare the custom attribute that will hold each vertex in.
+    // Declare the custom attribute that will hold each vertex in
     // the vertex buffer.
     "attribute vec4 aVertexPosition; " +
     "void main(void) { " +
@@ -34,7 +32,6 @@ function gl_load() {
     gl.shaderSource(vertex_shader, vertex_shader_src);
     // Compile the shader.
     gl.compileShader(vertex_shader);
-
     // Write fragment shader source code.
     var frag_shader_src = "" +
     // Set the precision of floats to medium.
