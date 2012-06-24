@@ -9,3 +9,8 @@ $ diff fastest.js moredata.js
 ```
 
 to see the differences between the two files.
+
+See it in action
+================
+* [fastest.html](http://qtip.github.com/webgl-examples/fastest.html)
+* [moredata.html](http://qtip.github.com/webgl-examples/moredata.html)
